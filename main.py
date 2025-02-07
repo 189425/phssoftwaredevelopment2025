@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+ from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import plotly.graph_objs as go
 import plotly.utils
@@ -127,4 +127,4 @@ def update_report():
         print(f"Error: {e}")
         return jsonify({"error": str(e)}, config={'displayModeBar': False}), 500
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
