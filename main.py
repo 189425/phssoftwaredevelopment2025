@@ -50,15 +50,15 @@ df = pd.DataFrame(data)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-@app.route('/reward')
+    return render_template('./index.html')
+@app.route('./reward')
 def reward():
-    return render_template('reward.html')
-@app.route('/green_audits')
+    return render_template('./reward.html')
+@app.route('./green_audits')
 def green_audit():
-    return render_template('greenaudits.html')
+    return render_template('./greenaudits.html')
 
-@app.route('/update_graph', methods=['POST'])
+@app.route('./update_graph', methods=['POST'])
 def update_graph():
     slider_value = int(request.json['slider_value'])
     column_name = f"Daily_kg_CO2_{slider_value}Hrs"
